@@ -13,10 +13,9 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 ### Microservicios Desarrollados
 
-- `usuarioservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
-- `productoservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
-- `________service`: > 📝 Indicar el nombre y función del microservicio adicional implementado.
-- `________service`: > 📝 Indicar el nombre y función del microservicio adicional implementado.
+- `usuarioservice`: > Permite la manipulación y almacenar distintos datos en la base de datos se los usuarios.
+- `productoservice`: > 📝 Permite la manipulación y almacenar distintos datos en la base de datos se los productos.
+- `carritoservice`: > 📝 Indicar el nombre y función del microservicio adicional implementado.
 
 ## 🛠️ Tecnologías Utilizadas
 
