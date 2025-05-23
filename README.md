@@ -1,9 +1,9 @@
 # EVALUACION 2 FULLSTACK
 
-## INTEGRANTES
-|Nombre             |Rol            |
-|-----------------------------------|
-|Brian Aravena      |q         |
-|Benjamín garcía    |Lider de equipo
-|Genesis Montero    |
----
+# Equipo de Proyecto
+
+| Nombre          | Rol             |
+|-----------------|-----------------|
+| Brian Aravena   | Desarrollador   | 
+| Benjamín García | Diseñadora      | 
+| Genesis montero | Project Manager | 
