@@ -19,13 +19,12 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 ## 🛠️ Tecnologías Utilizadas
 
-> 📝 Listar las tecnologías y herramientas utilizadas en el proyecto (Spring Boot, Maven, MySQL, Postman, GitHub, etc.).
-> Sprint Boot
-> Maven
-> Laragon
-> Github
-> IntelliJ
-> Postman
+- Sprint Boot
+- Maven
+- Laragon
+- Github
+- IntelliJ
+- Postman
 
 ## 🗄️ Configuración de Bases de Datos
 
@@ -43,9 +42,9 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 | Nombre                  | Rol en el proyecto         | Servicio principal trabajado |
 |-------------------------|----------------------------|------------------------------|
-| Brian Aravena | (Ej: Backend - Usuarios)   | usuarioservice               |
+| Brian Aravena | Backend   | usuarioservice               |
 | Benjamín García | Lider de equipo | productoservice              |
-| Genesis Montero | (Ej:Repositorio)           | pedidoservice                |
+| Genesis Montero | Desarrolladora           | carritoservice                |
 
 ## 📂 Estructura del Repositorio
 
