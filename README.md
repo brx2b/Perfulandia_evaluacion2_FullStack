@@ -42,9 +42,9 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 | Nombre                  | Rol en el proyecto         | Servicio principal trabajado |
 |-------------------------|----------------------------|------------------------------|
-| Brian Aravena | (Backend)   | usuarioservice               |
+| Brian Aravena | Backend   | usuarioservice               |
 | Benjamín García | Lider de equipo | productoservice              |
-| Genesis Montero | (Desarrolladora)           | carritoservice                |
+| Genesis Montero | Desarrolladora           | carritoservice                |
 
 ## 📂 Estructura del Repositorio
 
