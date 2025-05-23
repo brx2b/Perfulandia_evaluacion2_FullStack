@@ -4,6 +4,6 @@
 
 | Nombre          | Rol             |
 |-----------------|-----------------|
-| Brian Aravena   | Desarrollador   | 
-| Benjamín García | Diseñadora      | 
-| Genesis montero | Project Manager | 
+| Brian Aravena   | nose   | 
+| Benjamín García | nose    | 
+| Genesis montero | nose| 
