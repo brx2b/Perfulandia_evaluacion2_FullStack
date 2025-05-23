@@ -38,7 +38,7 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 | Nombre                  | Rol en el proyecto         | Servicio principal trabajado |
 |-------------------------|----------------------------|------------------------------|
 | Brian Aravena | (Ej: Backend - Usuarios)   | usuarioservice               |
-| Benjamín García integrante 2 | (Ej: Backend - Productos)  | productoservice              |
+| Benjamín García | (Ej: Backend - Productos)  | productoservice              |
 | Genesis Montero | (Ej:Repositorio)           | pedidoservice                |
 
 ## 📂 Estructura del Repositorio
