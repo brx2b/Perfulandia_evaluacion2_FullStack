@@ -19,13 +19,12 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 ## 🛠️ Tecnologías Utilizadas
 
-> 📝 Listar las tecnologías y herramientas utilizadas en el proyecto (Spring Boot, Maven, MySQL, Postman, GitHub, etc.).
-> Sprint Boot
-> Maven
-> Laragon
-> Github
-> IntelliJ
-> Postman
+- Sprint Boot
+- Maven
+- Laragon
+- Github
+- IntelliJ
+- Postman
 
 ## 🗄️ Configuración de Bases de Datos
 
