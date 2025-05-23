@@ -14,16 +14,23 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 ### Microservicios Desarrollados
 
 - `usuarioservice`: > Permite la manipulación y almacenar distintos datos en la base de datos se los usuarios.
-- `productoservice`: > 📝 Permite la manipulación y almacenar distintos datos en la base de datos se los productos.
+- `productoservice`: > Permite la manipulación y almacenar distintos datos en la base de datos se los productos.
 - `carritoservice`: > 📝 Indicar el nombre y función del microservicio adicional implementado.
 
 ## 🛠️ Tecnologías Utilizadas
 
 > 📝 Listar las tecnologías y herramientas utilizadas en el proyecto (Spring Boot, Maven, MySQL, Postman, GitHub, etc.).
+> Sprint Boot
+> Maven
+> Laragon
+> Github
+> IntelliJ
+> Postman
 
 ## 🗄️ Configuración de Bases de Datos
 
 > 📝 Indicar qué motor de base de datos usaron, cómo configuraron la conexión (`application.properties`), y qué tablas y campos definieron para cada microservicio.
+> 
 
 ## 📮 Endpoints y Pruebas
 
@@ -37,7 +44,7 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 | Nombre                  | Rol en el proyecto         | Servicio principal trabajado |
 |-------------------------|----------------------------|------------------------------|
 | Brian Aravena | (Ej: Backend - Usuarios)   | usuarioservice               |
-| Benjamín García | (Ej: Backend - Productos)  | productoservice              |
+| Benjamín García | Lider de equipo | productoservice              |
 | Genesis Montero | (Ej:Repositorio)           | pedidoservice                |
 
 ## 📂 Estructura del Repositorio
@@ -49,8 +56,7 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 📦 perfulandia-microservices
 ├── usuarioservice
 ├── productoservice
-├── pedidoservice (Ejemplo)
-├── notificacionservice (Ejemplo)
+├── carritoservice
 └── README.md
 
 ```
