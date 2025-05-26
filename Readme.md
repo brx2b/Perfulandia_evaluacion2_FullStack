@@ -5,7 +5,20 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 ## 📦 Descripción General del Proyecto
 
-> 📝 Explicar brevemente en qué consiste el sistema, qué problema resuelve y qué beneficios ofrece al reemplazar el antiguo sistema monolítico.
+Perfulandia SPA es una empresa chilena en expansión, con nuevas sucursales en Concepción y Viña del Mar. Su sistema actual, de arquitectura monolítica, ha comenzado a presentar problemas de rendimiento y disponibilidad, afectando las operaciones diarias y la experiencia del cliente.
+
+Para enfrentar estos desafíos, se ha optado por migrar a una arquitectura de microservicios, que permite mayor flexibilidad, escalabilidad y mantenimiento.
+
+Algunos Beneficios del nuevo sistema:
+
+- Mejor rendimiento y estabilidad.
+
+- Escalabilidad por servicio.
+
+- Mayor rapidez en el desarrollo y despliegue.
+
+- Mejor experiencia para el usuario final.
+
 
 ## 🧩 Arquitectura de Microservicios
 
@@ -27,9 +40,44 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 - Postman
 
 ## 🗄️ Configuración de Bases de Datos
+La base de datos que se utilizó para la verificación de las distintas funcionalidades y almacenamiento de datos de los distintintos microservicios fue **Laragon**.
 
-> 📝 Indicar qué motor de base de datos usaron, cómo configuraron la conexión (`application.properties`), y qué tablas y campos definieron para cada microservicio.
-> 
+
+Para la correcta configuración de la conexión del programa a la base de datos, Agregamos diferentes propiedades en el archivo "application.properties":
+
+spring.application.name: Define el nombre del microservicio.
+
+![image](https://github.com/user-attachments/assets/3f694bcc-4383-4ef7-a6b6-4c4a4afae512)
+
+
+server.port: Puerto donde se ejecutará la aplicación.
+
+![image](https://github.com/user-attachments/assets/297435e5-1d0e-431f-8c97-9bd46f9bf2ec)
+
+
+spring.datasource.url: Dirección URL de conexión a la base de datos.
+
+![image](https://github.com/user-attachments/assets/1cc42a25-b7ae-4362-94b2-ac8a8a173858)
+
+
+spring.datasource.username y password: Credenciales de acceso a la base de datos (usuario y contraseña).
+
+![image](https://github.com/user-attachments/assets/12eca86c-f5c3-4b89-a052-a33de6c5500b)
+
+
+spring.jpa.hibernate.ddl-auto: Indica cómo Hibernate debe manejar el esquema (en este caso, update actualiza la estructura sin borrar datos).
+
+![image](https://github.com/user-attachments/assets/fa2b61b7-85b4-4704-bb8b-f1392ce93c47)
+
+
+spring.jpa.show-sql: Muestra las consultas SQL en la consola.
+
+![image](https://github.com/user-attachments/assets/f611ac42-ae69-492d-bdf9-b7cef5b68bcc)
+
+hibernate.dialect: Define el dialecto específico de la base de datos como MYSQL, etc...
+
+![image](https://github.com/user-attachments/assets/90f20239-cb10-4f41-aef1-76d616a56aac)
+
 
 ## 📮 Endpoints y Pruebas
 
