@@ -84,6 +84,50 @@ hibernate.dialect: Define el dialecto específico de la base de datos como MYSQL
 > 📝 Especificar los principales endpoints disponibles por microservicio (CRUD y llamadas entre servicios).  
 > Incluir capturas o descripciones de pruebas realizadas con Postman (mínimo 3 por micro-servicio).
 
+**Microservicio userservice**
+
+Endpoints CRUD:
+
+- GET /users
+Lista todos los usuarios registrados.
+
+- GET /users/{id}
+Busca y devuelve un usuario específico por su ID.
+
+- POST /users
+Guarda (crea) un nuevo usuario en el sistema.
+
+- DELETE /users/{id}
+Elimina un usuario existente por su ID.
+
+---
+1) Endpoint que realiza la función de buscar mediante una id especifica de un usuario (user):
+   
+![image](https://github.com/user-attachments/assets/98319222-631a-4e5a-b6d6-f5a1236f21de)
+
+Prueba realizada en Postman :
+
+![image](https://github.com/user-attachments/assets/602eeac3-6554-41da-9e5f-b95dbd54f9fb)
+
+2) Endpoint que permite eliminar un user mediante una id en especifica:
+
+![image](https://github.com/user-attachments/assets/9e7659d5-3d4a-466b-8041-3716b2d184d7)
+
+Prueba realizada en Postman:
+
+![image](https://github.com/user-attachments/assets/dbd9b7d0-086d-4acf-bd7e-559d0fd614db)
+
+3) Endpoint que permite obtener las diferentes colecciones almacenadas:
+
+![image](https://github.com/user-attachments/assets/d04231f0-d1c8-4a22-a496-3fbfb29cf215)
+
+Prueba realizada en Postman:
+
+![image](https://github.com/user-attachments/assets/548d17fc-46b0-4144-8096-95af1ee510ab)
+
+**Microservicio productservice:**
+
+
 ## 🧑‍💻 Integrantes del Equipo
 
 > 📝 Indicar nombre completo y rol de cada integrante del equipo.
@@ -114,7 +158,9 @@ hibernate.dialect: Define el dialecto específico de la base de datos como MYSQL
 
 ## 📈 Lecciones Aprendidas
 
-> 📝 Reflexionar brevemente sobre qué aprendieron durante el desarrollo del proyecto (técnico y en trabajo en equipo).
+A lo largo de este proyecto, como equipo, no solo aprendimos a aplicar conceptos técnicos como la arquitectura de microservicios, sino también a trabajar de forma colaborativa, enfrentando desafíos reales del desarrollo de software moderno.
+Además, fortalecimos nuestras habilidades en herramientas como Spring Boot, bases de datos, configuración de servicios y comunicación entre componentes.
+
 
 ---
 
