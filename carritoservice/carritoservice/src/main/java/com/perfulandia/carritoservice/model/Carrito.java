@@ -4,15 +4,16 @@ package com.perfulandia.carritoservice.model;
 import jakarta.persistence.*;
 //todas las anotaciones necesarias para la persistencia de datos
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity
-//mi clase "carrito" sera guardada en la base de datos como tabla y
+//mi clase "carrito" sera guardada en la base de datos como tabla
 
 @Data
 //genera automaticamente getters setters y toString()
@@ -21,6 +22,8 @@ import java.util.Set;
 @NoArgsConstructor
 //los constructores con y sin argumentos
 
+@Builder
+
 public class Carrito {
     @Id
     //toma el primero de los campos como id
@@ -28,34 +31,13 @@ public class Carrito {
     //genera un id autoincremental automaticamente en la base d datos
     private long id;
 
-    private BigDecimal precioFinal = BigDecimal.ZERO;
-
+    //definicion de relacion, agregando el mappeBy para q
+    //cascade: cuando guardes/elimines al carrito igual eliminas los items en el
+    //orphanRemoval eliminas un item del carro igual lo eliminas d la base d datos
     @OneToMany(mappedBy = "carrito", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<CarritoItem> items = new HashSet<>();
-
-    //es para actualizar el precio final del carrito
-    private void actualizarPrecioFinal() {
-        this.precioFinal = items.stream().map(item -> {
-            BigDecimal precioUnidad = item.getPrecioUnidad();
-            if (precioUnidad == null) {
-                return  BigDecimal.ZERO;
-            }
-            return precioUnidad.multiply(BigDecimal.valueOf(item.getCantidadProducto()));
-        }).reduce(BigDecimal.ZERO, BigDecimal::add);
-    }
-
-    //Se usa mas tarde cuando se agregan o sacan productos, actualizando el precio acorde
-    public void agregarItem(CarritoItem item) {
-        this.items.add(item);
-        item.setCarrito(this);
-        actualizarPrecioFinal();
-    }
-
-    public void eliminarItem(CarritoItem item) {
-        this.items.remove(item);
-        item.setCarrito(null);
-        actualizarPrecioFinal();
-    }
+    //este campo maneja los items como una listilla, lo inicializamos vacio
+    private List<CarritoItem> items = new ArrayList<>();
 
 
 }
+

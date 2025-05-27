@@ -2,32 +2,34 @@ package com.perfulandia.carritoservice.model;
 import com.perfulandia.carritoservice.model.Producto;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import java.math.*;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class CarritoItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    //establecemos relacion
+    private long idProducto;
+    private String nombreProducto;
+    private double precioProducto;
     private int cantidadProducto;
-    private BigDecimal precioUnidad;
-    private BigDecimal precioTotal;
-    @ManyToOne
-    @JoinColumn(name = "id_producto")
-    private Producto producto;
+    private double precioTotal;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_carrito")
+    @ManyToOne
     private Carrito carrito;
 
+
+
     //calcula el precio total multiplicando la cantidad del producto x el precio unitario
-    public void setPrecioTotal(){
-        this.precioTotal = this.precioUnidad.multiply(new BigDecimal(cantidadProducto));
+    public void setPrecioTotal() {
+            this.precioTotal = precioProducto*cantidadProducto;
     }
+
+
 }
