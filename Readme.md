@@ -127,6 +127,42 @@ Prueba realizada en Postman:
 
 **Microservicio productservice:**
 
+Endpoints CRUD:
+
+GET /products
+Lista todos los productos disponibles.
+
+GET /products/{id}
+Busca y devuelve un producto específico por su ID.
+
+POST /products
+Crea un nuevo producto en el sistema.
+
+PUT /products/{id}
+Actualiza la información de un producto existente por su ID.
+
+DELETE /products/{id}
+Elimina un producto por su ID.
+
+1) Endpoint que permite obtener las colecciones de productos:
+
+![image](https://github.com/user-attachments/assets/5995a295-043a-4bf0-a64a-aa9f81c5e9e5)
+
+Prueba en Postman:
+
+2) Endpoint que permite guardar un nuevo producto:
+
+![image](https://github.com/user-attachments/assets/e9b062ac-1b20-48ed-a15e-5beb8b0692d6)
+
+Prueba en Postman:
+
+3) Endpoint que permite obtener producto mediante su id:
+   
+![image](https://github.com/user-attachments/assets/2fdd7120-a26d-4d8d-afe7-2d28f3474475)
+
+Prueba en Postman:
+
+
 
 ## 🧑‍💻 Integrantes del Equipo
 
