@@ -24,6 +24,25 @@ Algunos Beneficios del nuevo sistema:
 
 > 📝 Describir cómo está estructurado el sistema en microservicios. Pueden incluir un diagrama y explicar brevemente la función de cada servicio.
 
+---
+
+## Ejemplo práctico de flujo ##
+
+El cliente entra a la tienda -> ve perfumes.
+
+Cliente pide perfumes -> Microservicio Productos.
+
+Cliente elige uno -> lo agrega al carrito.
+
+Microservicio Carrito llama al Microservicio Productos para validar stock.
+
+Carrito lo guarda en su base de datos.
+
+Al comprar, el Carrito consulta al Microservicio Usuarios para saber quién eres.
+
+Si todo está bien -> La compra es realizada exitosamente.
+
+---
 ### Microservicios Desarrollados
 
 - `usuarioservice`: > Permite la manipulación y almacenar distintos datos en la base de datos se los usuarios.
