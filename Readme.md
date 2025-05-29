@@ -24,6 +24,25 @@ Algunos Beneficios del nuevo sistema:
 
 > 📝 Describir cómo está estructurado el sistema en microservicios. Pueden incluir un diagrama y explicar brevemente la función de cada servicio.
 
+---
+
+## Ejemplo práctico de flujo ##
+
+El cliente entra a la tienda -> ve perfumes.
+
+Cliente pide perfumes -> Microservicio Productos.
+
+Cliente elige uno -> lo agrega al carrito.
+
+Microservicio Carrito llama al Microservicio Productos para validar stock.
+
+Carrito lo guarda en su base de datos.
+
+Al comprar, el Carrito consulta al Microservicio Usuarios para saber quién eres.
+
+Si todo está bien -> La compra es realizada exitosamente.
+
+---
 ### Microservicios Desarrollados
 
 - `usuarioservice`: > Permite la manipulación y almacenar distintos datos en la base de datos se los usuarios.
@@ -32,7 +51,7 @@ Algunos Beneficios del nuevo sistema:
 
 ## 🛠️ Tecnologías Utilizadas
 
-- Sprint Boot
+- Spring Boot
 - Maven
 - Laragon
 - Github
@@ -144,11 +163,14 @@ Actualiza la información de un producto existente por su ID.
 DELETE /products/{id}
 Elimina un producto por su ID.
 
+---
 1) Endpoint que permite obtener las colecciones de productos:
 
 ![image](https://github.com/user-attachments/assets/5995a295-043a-4bf0-a64a-aa9f81c5e9e5)
 
 Prueba en Postman:
+
+![image](https://github.com/user-attachments/assets/866e7a20-f99a-4163-85f7-7a85f2a6716c)
 
 2) Endpoint que permite guardar un nuevo producto:
 
@@ -156,13 +178,21 @@ Prueba en Postman:
 
 Prueba en Postman:
 
+![image](https://github.com/user-attachments/assets/b58d1564-ea3f-4962-bf73-2df1eb4255a6)
+
 3) Endpoint que permite obtener producto mediante su id:
    
 ![image](https://github.com/user-attachments/assets/2fdd7120-a26d-4d8d-afe7-2d28f3474475)
 
 Prueba en Postman:
 
+![image](https://github.com/user-attachments/assets/ba613b35-00fd-43a3-864d-8aad1d048aec)
 
+
+**Microservicio carritoservice:**
+
+
+---
 
 ## 🧑‍💻 Integrantes del Equipo
 
