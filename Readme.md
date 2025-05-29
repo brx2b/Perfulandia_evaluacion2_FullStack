@@ -22,11 +22,10 @@ Algunos Beneficios del nuevo sistema:
 
 ## 🧩 Arquitectura de Microservicios
 
-> 📝 Describir cómo está estructurado el sistema en microservicios. Pueden incluir un diagrama y explicar brevemente la función de cada servicio.
-
 ---
 
 ## Ejemplo práctico de flujo ##
+
 
 El cliente entra a la tienda -> ve perfumes.
 
@@ -47,7 +46,7 @@ Si todo está bien -> La compra es realizada exitosamente.
 
 - `usuarioservice`: > Permite la manipulación y almacenar distintos datos en la base de datos se los usuarios.
 - `productoservice`: > Permite la manipulación y almacenar distintos datos en la base de datos se los productos.
-- `carritoservice`: > 📝 Indicar el nombre y función del microservicio adicional implementado.
+- `carritoservice`: > Permite almacenar distintos productos de los usuarios.
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -99,8 +98,7 @@ hibernate.dialect: Define el dialecto específico de la base de datos como MYSQL
 
 
 ## 📮 Endpoints y Pruebas
-
-> 📝 Especificar los principales endpoints disponibles por microservicio (CRUD y llamadas entre servicios).  
+  
 > Incluir capturas o descripciones de pruebas realizadas con Postman (mínimo 3 por micro-servicio).
 
 **Microservicio userservice**
@@ -187,10 +185,6 @@ Prueba en Postman:
 Prueba en Postman:
 
 ![image](https://github.com/user-attachments/assets/ba613b35-00fd-43a3-864d-8aad1d048aec)
-
-
-**Microservicio carritoservice:**
-
 
 ---
 
