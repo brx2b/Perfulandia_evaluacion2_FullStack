@@ -18,10 +18,6 @@ import org.springframework.web.client.RestTemplate;
 public class CarritoController {
     private final CarritoService servicio;
     private final RestTemplate restTemplate;
-    private Producto buscarProducto(Long idProducto) {
-        String url = "http://localhost:8081/api/productos/" + idProducto;  // or your product service URL
-        return restTemplate.getForObject(url, Producto.class);
-    }
 
     public CarritoController(CarritoService servicio, RestTemplate restTemplate) {
         this.servicio = servicio;
