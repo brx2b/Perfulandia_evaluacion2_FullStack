@@ -190,8 +190,6 @@ Prueba en Postman:
 
 ## 🧑‍💻 Integrantes del Equipo
 
-> 📝 Indicar nombre completo y rol de cada integrante del equipo.
-
 | Nombre                  | Rol en el proyecto         | Servicio principal trabajado |
 |-------------------------|----------------------------|------------------------------|
 | Brian Aravena | Backend   | usuarioservice               |
@@ -199,8 +197,6 @@ Prueba en Postman:
 | Genesis Montero | Desarrolladora           | carritoservice                |
 
 ## 📂 Estructura del Repositorio
-
-> 📝 Explicar brevemente la organización de carpetas del repositorio (por ejemplo, cada carpeta corresponde a un microservicio separado con su propio `pom.xml`).
 
 ```
 
