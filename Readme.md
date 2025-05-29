@@ -186,6 +186,37 @@ Prueba en Postman:
 
 ![image](https://github.com/user-attachments/assets/ba613b35-00fd-43a3-864d-8aad1d048aec)
 
+**Microservicio carritoservice:**
+
+Endpoints CRUD:
+
+GET /products
+Lista todos los carritos disponibles.
+
+GET /products/{id}
+Busca y devuelve un carrito específico por su ID.
+
+POST /products
+Crea un nuevo carrito en el sistema.
+
+PUT /products/{id}
+Actualiza la información de un carrito existente por su ID.
+
+DELETE /products/{id}
+Elimina un carrito por su ID.
+
+1) Endpoint que permite obtener las colecciones de productos:
+
+Prueba en Postman:
+
+2) Endpoint que permite guardar un nuevo producto:
+
+Prueba en Postman:
+
+3) Endpoint que permite obtener producto mediante su id:
+
+Prueba en Postman:
+
 ---
 
 ## 🧑‍💻 Integrantes del Equipo
