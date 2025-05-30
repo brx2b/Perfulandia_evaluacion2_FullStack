@@ -4,6 +4,7 @@ import com.perfulandia.productservice.model.Producto;
 import com.perfulandia.productservice.service.ProductoService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Map;
 
 //Nuevas importaciones DTO conexión al MS usuario
 import org.springframework.web.client.RestTemplate;
@@ -48,5 +49,9 @@ public class ProductoController {
     @GetMapping("/usuario/{id}")
     public Usuario obtenerUsuario(@PathVariable long id){
         return restTemplate.getForObject("http://localhost:8081/api/usuarios/"+id,Usuario.class);
+    }
+    @PatchMapping("/{id}")
+    public Producto actualizar(@PathVariable Long id, @RequestBody Map<String, Object> campos){
+        return servicio.actualizar(id,campos);
     }
 }

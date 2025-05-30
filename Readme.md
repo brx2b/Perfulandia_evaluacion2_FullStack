@@ -108,13 +108,13 @@ Endpoints CRUD:
 - GET /users
 Lista todos los usuarios registrados.
 
-- GET /users/{id}
-Busca y devuelve un usuario específico por su ID.
+- PATCH /usuarios/{id}
+Actualiza los datos de un usuario existente por su ID.
 
-- POST /users
+- POST /usuarios
 Guarda (crea) un nuevo usuario en el sistema.
 
-- DELETE /users/{id}
+- DELETE /usuarios/{id}
 Elimina un usuario existente por su ID.
 
 ---
@@ -142,6 +142,7 @@ Prueba realizada en Postman:
 
 ![image](https://github.com/user-attachments/assets/548d17fc-46b0-4144-8096-95af1ee510ab)
 
+
 **Microservicio productservice:**
 
 Endpoints CRUD:
@@ -149,14 +150,11 @@ Endpoints CRUD:
 GET /products
 Lista todos los productos disponibles.
 
-GET /products/{id}
-Busca y devuelve un producto específico por su ID.
-
 POST /products
 Crea un nuevo producto en el sistema.
 
-PUT /products/{id}
-Actualiza la información de un producto existente por su ID.
+PATCH /products/{id}
+Actualiza los datos de un producto existente por su ID.
 
 DELETE /products/{id}
 Elimina un producto por su ID.
@@ -178,13 +176,13 @@ Prueba en Postman:
 
 ![image](https://github.com/user-attachments/assets/b58d1564-ea3f-4962-bf73-2df1eb4255a6)
 
-3) Endpoint que permite obtener producto mediante su id:
+3) Endpoint que permite actualizar producto mediante su id:
    
-![image](https://github.com/user-attachments/assets/2fdd7120-a26d-4d8d-afe7-2d28f3474475)
+![image](https://github.com/user-attachments/assets/2be05e41-b79b-48d0-a93b-ee3aea7638d4)
 
 Prueba en Postman:
 
-![image](https://github.com/user-attachments/assets/ba613b35-00fd-43a3-864d-8aad1d048aec)
+![image](https://github.com/user-attachments/assets/63cf2af9-5c07-4bfd-9931-6a8d4a24a8cb)
 
 **Microservicio carritoservice:**
 
@@ -193,14 +191,11 @@ Endpoints CRUD:
 GET /products
 Lista todos los carritos disponibles.
 
-GET /products/{id}
-Busca y devuelve un carrito específico por su ID.
-
 POST /products
 Crea un nuevo carrito en el sistema.
 
-PUT /products/{id}
-Actualiza la información de un carrito existente por su ID.
+PATCH /carrito/{id}
+Actualiza los datos de un carrito existente por su ID.
 
 DELETE /products/{id}
 Elimina un carrito por su ID.
