@@ -25,6 +25,7 @@ Algunos Beneficios del nuevo sistema:
 ---
 
 ## Ejemplo práctico de flujo ##
+![Diagrama de arquitectura de Microservicios](https://github.com/user-attachments/assets/00324847-f230-4051-b8f1-8a360d4b43bb)
 
 
 El cliente entra a la tienda -> ve perfumes.
