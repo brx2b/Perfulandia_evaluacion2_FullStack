@@ -195,23 +195,32 @@ Lista todos los carritos disponibles.
 POST /products
 Crea un nuevo carrito en el sistema.
 
-PATCH /carrito/{id}
-Actualiza los datos de un carrito existente por su ID.
-
 DELETE /products/{id}
 Elimina un carrito por su ID.
 
 1) Endpoint que permite obtener las colecciones de productos:
 
+![image](https://github.com/user-attachments/assets/75b2d9db-3140-4760-b6b5-c6a2b2ac5a7b)
+
 Prueba en Postman:
+
+![image](https://github.com/user-attachments/assets/15648c60-6fd8-4fdc-81b5-bffbd7049aad)
 
 2) Endpoint que permite guardar un nuevo producto:
 
+![image](https://github.com/user-attachments/assets/af2eaeb6-6f13-480f-b67a-2996d53a9ddf)
+
 Prueba en Postman:
+
+![image](https://github.com/user-attachments/assets/8134f619-6d2f-45c5-96f2-4e0e7b8a6752)
 
 3) Endpoint que permite obtener producto mediante su id:
 
+![image](https://github.com/user-attachments/assets/ee0bd9fe-9705-469b-b8d2-67d7cc3bcc54)
+
 Prueba en Postman:
+
+![image](https://github.com/user-attachments/assets/bbf20db9-16d9-448b-a1bd-4d4ca746c0a5)
 
 ---
 
