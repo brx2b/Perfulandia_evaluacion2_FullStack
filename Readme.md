@@ -195,6 +195,9 @@ Lista todos los carritos disponibles.
 POST /products
 Crea un nuevo carrito en el sistema.
 
+PATCH /products
+Actualiza datos existentes a un producto por su ID.
+
 DELETE /products/{id}
 Elimina un carrito por su ID.
 
