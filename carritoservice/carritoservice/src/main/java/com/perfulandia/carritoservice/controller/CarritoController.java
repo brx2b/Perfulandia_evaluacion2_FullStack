@@ -48,14 +48,23 @@ public class CarritoController {
         return ResponseEntity.ok("✅ El carrito se eliminó con éxito");
     }
 
-    @PatchMapping("/{id}")
-    public CarritoItem actualizar(@PathVariable Long id, @RequestBody Map<String, Object> campos) {
-        return servicio.actualizar(id, campos);
+    @PatchMapping("/items/{id}")
+    public ResponseEntity<CarritoItem> actualizarItem(@PathVariable Long id, @RequestBody Map<String, Object> campos) {
+        CarritoItem actualizado = servicio.actualizar(id, campos);
+        if (actualizado == null) {
+            return ResponseEntity.notFound().build(); // Retorna 404 si no se encontró el item
+        }
+        return ResponseEntity.ok(actualizado); // Retorna el item actualizado
     }
+
+
+
 
     @PostMapping("/{carritoId}/items")
     public ResponseEntity<?> agregarItemAlCarrito(@PathVariable long carritoId, @RequestBody CarritoItem item) {
+
         Carrito actualizado = servicio.agregarItemAlCarrito(carritoId, item);
+
         if (actualizado == null) {
             return ResponseEntity.notFound().build();
         }

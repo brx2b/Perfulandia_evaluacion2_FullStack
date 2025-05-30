@@ -19,6 +19,14 @@ public class CarritoItem {
     private int cantidad;
     private double precioTotal;
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setCarrito(Carrito carrito) {
+        this.carrito = carrito;
+    }
+
     @ManyToOne
     @JoinColumn(name = "carrito_id")
     @JsonIgnore
@@ -28,8 +36,8 @@ public class CarritoItem {
 
 
     //calcula el precio total multiplicando la cantidad del producto x el precio unitario
-    public void setPrecioTotal() {
-            this.precioTotal = precioUnidad*cantidad;
+    public void calcularPrecioTotal() {
+        this.precioTotal = this.precioUnidad * this.cantidad;
     }
 
 

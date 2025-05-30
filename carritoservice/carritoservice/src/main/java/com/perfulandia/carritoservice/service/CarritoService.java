@@ -12,8 +12,8 @@ import java.util.Map;
 @Service
 public class CarritoService {
 
-    public final CarritoRepository repoCarrito;
-    public final CarritoItemRepository repoCarritoItem;
+    private final CarritoRepository repoCarrito;
+    private final CarritoItemRepository repoCarritoItem;
 
     public CarritoService(CarritoRepository repoCarrito, CarritoItemRepository repoCarritoItem) {
         this.repoCarrito = repoCarrito;
@@ -28,7 +28,7 @@ public class CarritoService {
         carrito.setId(0);
         for (CarritoItem item : carrito.getItems()) {
             item.setCarrito(carrito);
-            item.setPrecioTotal();
+            item.calcularPrecioTotal();  // CORREGIDO: usa calcularPrecioTotal()
             item.setId(0);
         }
         return repoCarrito.save(carrito);
@@ -45,9 +45,9 @@ public class CarritoService {
     public CarritoItem actualizar(long id, Map<String, Object> campos) {
         CarritoItem carritoItem = repoCarritoItem.findById(id).orElse(null);
         if (carritoItem == null) {
-            return null;
+            return null; // El item no existe
         }
-
+        // Actualiza los campos según el mapa recibido
         campos.forEach((clave, valor) -> {
             switch (clave) {
                 case "nombre":
@@ -69,24 +69,29 @@ public class CarritoService {
                     break;
             }
         });
-
-        carritoItem.setPrecioTotal();
-        return repoCarritoItem.save(carritoItem);
+        // Calcula el precio total después de actualizar los campos
+        carritoItem.calcularPrecioTotal();
+        try {
+            return repoCarritoItem.save(carritoItem); // Guarda los cambios
+        } catch (Exception e) {
+            // Log de error
+            System.err.println("Error al guardar el carrito item: " + e.getMessage());
+            return null;
+        }
     }
+
+
 
     public Carrito agregarItemAlCarrito(long carritoId, CarritoItem item) {
         Carrito carrito = repoCarrito.findById(carritoId).orElse(null);
         if (carrito == null) return null;
 
-        item.setCarrito(carrito); // asocia el item al carrito
-        item.setId(0); // fuerza INSERT en lugar de UPDATE
-        item.setPrecioTotal(); // calcula el precio total si tienes esa lógica
+        item.setCarrito(carrito);
+        item.setId(0);
+        item.calcularPrecioTotal();  
 
-        // Guarda el item en la base de datos
         repoCarritoItem.save(item);
 
-        // Vuelve a cargar el carrito con los items
         return repoCarrito.findById(carritoId).orElse(null);
     }
-
 }
