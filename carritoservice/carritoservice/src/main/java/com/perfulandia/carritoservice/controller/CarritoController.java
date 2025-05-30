@@ -1,11 +1,10 @@
 package com.perfulandia.carritoservice.controller;
 
-import com.perfulandia.carritoservice.model.CarritoItem;
-import com.perfulandia.carritoservice.model.Producto;
 import com.perfulandia.carritoservice.repository.CarritoRepository;
 import com.perfulandia.carritoservice.service.CarritoService;
 import com.perfulandia.carritoservice.model.Carrito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -34,17 +33,20 @@ public class CarritoController {
 
     @PostMapping
     public Carrito guardarCarrito(@RequestBody Carrito carrito){
-
         return servicio.guardarCarrito(carrito);
-    }
+    };
+
     @GetMapping("/{id}")
     public Carrito buscarCarrito(@PathVariable long id){
         return servicio.buscarCarrito(id);
+
     }
     @DeleteMapping("/{id}")
-    public void eliminarCarrito(@PathVariable long id){
+    public ResponseEntity<String> eliminarCarrito(@PathVariable long id){
         servicio.eliminarCarrito(id);
+        return ResponseEntity.ok("✅ El carrito se elimino con éxito");
     }
+
 
 
 }

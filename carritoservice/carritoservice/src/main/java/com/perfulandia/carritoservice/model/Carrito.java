@@ -34,6 +34,7 @@ public class Carrito {
     //definicion de relacion, agregando el mappeBy para q
     //cascade: cuando guardes/elimines al carrito igual eliminas los items en el
     //orphanRemoval eliminas un item del carro igual lo eliminas d la base d datos
+
     @OneToMany(mappedBy = "carrito", cascade = CascadeType.ALL, orphanRemoval = true)
     //este campo maneja los items como una listilla, lo inicializamos vacio
     private List<CarritoItem> items = new ArrayList<>();
