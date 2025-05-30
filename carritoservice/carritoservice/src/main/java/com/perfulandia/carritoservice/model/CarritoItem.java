@@ -19,10 +19,11 @@ public class CarritoItem {
     private int cantidad;
     private double precioTotal;
 
-    @JoinColumn(name="carrito_id")
     @ManyToOne
+    @JoinColumn(name = "carrito_id")
     @JsonIgnore
     private Carrito carrito;
+
 
 
 
