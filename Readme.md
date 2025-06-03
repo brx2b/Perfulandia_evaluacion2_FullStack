@@ -249,7 +249,7 @@ Prueba en Postman:
 
 ## 👥 Colaboración en GitHub
 
-> 📝 Explicar cómo se organizó el trabajo en ramas (`master`, `pruebas`), frecuencia de commits y cómo se coordinaron como equipo.
+Para el trabajo en equipo cordinamos las tareas mediante la red social whatsapp y utilizamos el repositorio general de Github para hacer nuestros aportes.
 
 ## 📈 Lecciones Aprendidas
 
